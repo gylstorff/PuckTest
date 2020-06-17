@@ -9,7 +9,7 @@
   <script src="https://www.puck-js.com/puck.js"></script>
   <script type="text/javascript">
     // ------------------------------------- REPLACE ME
-    var URL = "https://maker.ifttt.com/trigger/puck_pressed/with/key/c1_oERkjbgJ0R60FF2SNUi?value1=DKRMCCO01.10";
+    var URL = "https://maker.ifttt.com/trigger/puck_pressed/with/key/c1_oERkjbgJ0R60FF2SNUi";
     // ------------------------------------- REPLACE ME
     var button = document.getElementsByTagName('button')[0];
     var logelement = document.getElementById('log');
@@ -30,18 +30,18 @@
       log("Received: "+JSON.stringify(v));
       if (v.indexOf("Pressed")>=0) {
         log("Calling IFTTT");
-        
+/*        
        if(ledon==1)
         {
-         //Puck.write('LED1.set();\n');
+         Puck.write('LED1.set();\n');
          ledon=0;
         }
         else
         {
-         //Puck.write('LED1.reset();\n');
+         Puck.write('LED1.reset();\n');
          ledon=1;
         }
-
+*/
         ifttt();
       }
     }
