@@ -32,9 +32,15 @@
         log("Calling IFTTT");
         ifttt();
        
-        Puck.write(
-         ledon ? 'LED1.set();\n' : 'LED1.reset();\n';
+        if(ledon)
+        {
+         Puck.write('LED1.set();\n'};
+        }
+        else
+        {
+         Puck.write('LED1.reset();\n';
         );
+         
         ledon = !ledon;
       }
     }
