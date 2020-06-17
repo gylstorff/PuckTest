@@ -23,25 +23,26 @@
       iftttRequests++;
     }
 
-   var ledon = false;
+   var ledon = 1;
    
     // Called when we get a line of data
     function onLine(v) {
       log("Received: "+JSON.stringify(v));
       if (v.indexOf("Pressed")>=0) {
         log("Calling IFTTT");
-        ifttt();
-       
-        if(ledon)
+        
+       if(ledon==1)
         {
          //Puck.write('LED1.set();\n');
+         ledon=0;
         }
         else
         {
          //Puck.write('LED1.reset();\n');
+         ledon=1;
         }
-         
-        ledon = !ledon;
+
+        ifttt();
       }
     }
 
