@@ -8,8 +8,10 @@
   <iframe id="ifttt" style="width:640px;height:32px"></iframe>
   <script src="https://www.puck-js.com/puck.js"></script>
   <script type="text/javascript">
+   <button onclick="Puck.write('LED1.set();\n');">On!</button>
+   <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
     // ------------------------------------- REPLACE ME
-    var URL = "https://maker.ifttt.com/trigger/puck_pressed/with/key/c1_oERkjbgJ0R60FF2SNUi?value1=DK RM CCO 01.10";
+    var URL = "https://maker.ifttt.com/trigger/puck_pressed/with/key/c1_oERkjbgJ0R60FF2SNUi?value1=DKRMCCO01.10";
     // ------------------------------------- REPLACE ME
     var button = document.getElementsByTagName('button')[0];
     var logelement = document.getElementById('log');
