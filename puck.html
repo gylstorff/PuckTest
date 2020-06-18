@@ -30,18 +30,6 @@
       log("Received: "+JSON.stringify(v));
       if (v.indexOf("Pressed")>=0) {
         log("Calling IFTTT");
-/*        
-       if(ledon==1)
-        {
-         Puck.write('LED1.set();\n');
-         ledon=0;
-        }
-        else
-        {
-         Puck.write('LED1.reset();\n');
-         ledon=1;
-        }
-*/
         ifttt();
       }
     }
